@@ -1,0 +1,40 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Dylan",
+  "lastName": "Badaro",
+  "email": "dylanbadaro@gmail.com",
+  "pass": "password",
+  "rePass": "password",
+  "dni":4544365,
+  "tel": 3794562823
+}
+
+//trae todos los usuarios
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+
+//trae un usuario en especifico
+###
+GET http://localhost:9000/api/users/66dd1b7266b318f1e3f7bd9c HTTP/1.1 
+//users/66dd.. es el id de uno de los usuarios creados ya en la bd
+
+###
+DELETE http://localhost:9000/api/users/66dd1b7266b318f1e3f7bd9c HTTP/1.1 
+
+###
+PUT http://localhost:9000/api/users/66dd1b7266b318f1e3f7bd9c HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Barbi",
+  "lastName": "Funes",
+  "email": "barbifunes@email.com",
+  "pass": "bardy",
+  "rePass": "bardy",
+  "dni": 44673534,
+  "tel": 56364325
+}
